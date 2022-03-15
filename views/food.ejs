@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food</title>
+
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a href=".">Home</a>
+            <a href="datatype">DataType</a>
+            <a href="ethnicity">Ethnicity</a>
+            <a href="food">Food</a>
+            <a href="nutrient">Nutrient</a>
+            <a href="purchases">Purchases</a>
+            <a href="expenditures">Expenditures</a>
+            <a href="intakes">Intakes</a>
+        </div>
+    </header>
+
+    <div>
+        <h1>List of Foods</h1>
+
+        <div>        
+            <h3>Refine search on description for food items in the table :</h3>
+        
+            <form action="/food" method="POST">
+                <table>
+                    <tr>
+                        <td><input id="search-box" type="text" name="keyword" value="<%= search %>"></td>
+                        <td><input type="submit" value="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <%if (food.length == 0) { %>
+
+        <h1>NO RECORDS FOUND !!!</h1>
+
+        <% } else { %>
+
+        <h3>These are the Food records: (<%= food.length %>) </h3>
+
+        <form action="food" method="GET">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Food</th>
+                </tr>
+
+                <% food.forEach(function(row){ %>
+                <tr>
+                    <td><%= row.ID %></td>
+                    <td><%= row.Food %></td>
+                </tr>
+                <% }) %>
+
+            </table>
+        </form>
+
+        <% } %>
+    </div>
+
+</body>
+
+</html>

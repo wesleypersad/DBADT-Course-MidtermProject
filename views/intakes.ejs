@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intakes</title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a href=".">Home</a>
+            <a href="datatype">DataType</a>
+            <a href="ethnicity">Ethnicity</a>
+            <a href="food">Food</a>
+            <a href="nutrient">Nutrient</a>
+            <a href="purchases">Purchases</a>
+            <a href="expenditures">Expenditures</a>
+            <a href="intakes">Intakes</a>
+        </div>
+    </header>
+
+    <div>
+        <h1>List of Intakes</h1>
+
+        <div>
+            <h3>Refine search on nutrient description for items in the table :</h3>
+        
+            <form action="/intakes" method="POST">
+                <table>
+                    <tr>
+                        <td><input id="search-box" type="text" name="keyword" value="<%= search %>"></td>
+                        <td><input type="submit" value="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <%if (intakes.length == 0) { %>
+
+        <h1>NO RECORDS FOUND !!!</h1>
+
+        <% } else { %>
+
+        <h3>These are the Intakes records: (<%= intakes.length %>)</h3>
+
+        <form action="intakes" method="GET">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>DataType</th>
+                    <th>Survey_Year</th>
+                    <th>Ethnicity</th>
+                    <th>Nutrient</th>
+                    <th>Estimate_of_daily_intake</th>
+                    <th>Standard_error</th>
+                    <th>Residual_Standard_Error</th>
+                </tr>
+
+                <% intakes.forEach(function(row){ %>
+                <tr>
+                    <td><%= row.ID %></td>
+                    <td><%= row.DataType %></td>
+                    <td><%= row.Survey_Year %></td>
+                    <td><%= row.Ethnicity %></td>
+                    <td><%= row.Nutrient %></td>
+                    <td><%= row.Estimate_of_daily_intake %></td>
+                    <td><%= row.Standard_error %></td>
+                    <td><%= row.Residual_Standard_Error %></td>
+                </tr>
+                <% }) %>
+
+            </table>
+        </form>
+
+        <% } %>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+ID,Nutrient_description
+1,Vegetable Protein
+2,Animal Protein
+3,Fat
+4,Saturates
+5,Mono-unsaturates
+6,Poly-unsaturates
+7,Carbohydrate
+8,Energy - Kcal
+9,Energy - MJ
+10,Calcium
+11,Iron
+12,Retinol
+13,Carotene
+14,Retinol equivalent
+15,Thiamin
+16,Riboflavin
+19,Niacin Equivalent
+20,Vitamin C
+21,Vitamin D
+22,FOLATE
+23,Sodium
+24,Starch
+25,Glucose
+26,Fructose
+27,Sucrose
+28,Maltose
+29,Lactose
+30,Other sugars
+31,Total sugars
+32,Non-milk extr sugars
+33,Alcohol
+34,Fibre:Southgate
+35,Fibre:Englyst
+36,Potassium
+37,Magnesium
+38,Copper
+39,Zinc
+40,Vitamin B6
+41,Vitamin B12
+42,Phosphorus
+43,Manganese
+44,Biotin
+45,Pantothenic acid
+46,Vitamin E
+47,Cholesterol

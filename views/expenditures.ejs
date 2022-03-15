@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expenditures</title>
+</head>
+
+<body>
+    <header>
+        <div class="topnav">
+            <a href=".">Home</a>
+            <a href="datatype">DataType</a>
+            <a href="ethnicity">Ethnicity</a>
+            <a href="food">Food</a>
+            <a href="nutrient">Nutrient</a>
+            <a href="purchases">Purchases</a>
+            <a href="expenditures">Expenditures</a>
+            <a href="intakes">Intakes</a>
+        </div>
+    </header>
+
+    <div>
+        <h1>List of Expenditures</h1>
+
+        <div>
+            <h3>Refine search on food description for items in the table :</h3>
+
+            <form action="/expenditures" method="POST">
+                <table>
+                    <tr>
+                        <td><input id="search-box" type="text" name="keyword" value="<%= search %>"></td>
+                        <td><input type="submit" value="submit"></td>
+                    </tr>
+                </table>
+            </form>
+        </div>
+
+        <%if (expenditures.length == 0) { %>
+
+        <h1>NO RECORDS FOUND !!!</h1>
+
+        <% } else { %>
+
+        <h3>These are the Expenditures records: (<%= expenditures.length %>)</h3>
+
+        <form action="expenditures" method="GET">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Survey_Year</th>
+                    <th>Ethnicity</th>
+                    <th>Food</th>
+                    <th>Est_av_exp</th>
+                    <th>Standard_error</th>
+                    <th>Res_standard_error</th>
+                </tr>
+
+                <% expenditures.forEach(function(row){ %>
+                <tr>
+                    <td><%= row.ID %></td>
+                    <td><%= row.Survey_Year %></td>
+                    <td><%= row.Ethnicity %></td>
+                    <td><%= row.Food %></td>
+                    <td><%= row.Est_av_exp %></td>
+                    <td><%= row.Standard_error %></td>
+                    <td><%= row.Res_standard_error %></td>
+                </tr>
+                <% }) %>
+
+            </table>
+        </form>
+
+        <% } %>
+    </div>
+
+</body>
+
+</html>
