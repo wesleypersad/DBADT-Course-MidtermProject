@@ -9,7 +9,7 @@ const mysql = require("mysql");
 // use port 5000 or port assigned by local environment for the server
 const port = process.env.PORT || 5000;
 const host = process.env.DB_HOST;
-const portdb = process.env.DB_POST;
+const portdb = process.env.DB_PORT;
 const user = process.env.DB_USER;
 const password = process.env.DB_PASSWORD;
 const database = process.env.DB_NAME;
