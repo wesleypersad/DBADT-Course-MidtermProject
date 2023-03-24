@@ -1,8 +1,18 @@
+// get dotenv variables
+require('dotenv').config();
+
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 const mysql = require("mysql");
-const port = 8089;
+
+// use port 5000 or port assigned by local environment for the server
+const port = process.env.PORT || 5000;
+const host = process.env.DB_HOST;
+const user = process.env.DB_USER;
+const password = process.env.DB_PASSWORD;
+const database = process.env.DB_NAME;
+
 const path = require("path");
 
 app.use(express.static(path.join(__dirname, '/public')));
@@ -12,10 +22,10 @@ app.use(bodyParser.urlencoded({
 }));
 
 const db = mysql.createConnection({
-    host: "localhost",
-    user: "root",
-    password: "",
-    database: "midterm"
+    host: host,
+    user: user,
+    password: password,
+    database: database
 });
 
 // connect to database
@@ -23,7 +33,7 @@ db.connect((err) => {
     if (err) {
         throw err;
     }
-    console.log("Connected to database");
+    console.log(`Connected to database ${database}`);
 });
 
 global.db = db;
