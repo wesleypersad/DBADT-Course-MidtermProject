@@ -4,7 +4,7 @@ require('dotenv').config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
-const mysql = require("mysql");
+const mysql = require("mysql2");
 
 // use port 5000 or port assigned by local environment for the server
 const port = process.env.PORT || 5000;
