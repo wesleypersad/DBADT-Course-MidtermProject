@@ -24,6 +24,8 @@ module.exports = function (app) {
                 res.render('datatype.ejs', { datatypes: result });
             }
         });
+        // end the connection
+        db.end();
     });
     app.get("/ethnicity", function (req, res) {
         //searching in the database
@@ -42,6 +44,8 @@ module.exports = function (app) {
                 res.render('ethnicity.ejs', { ethnicity: result });
             }
         });
+        // end the connection
+        db.end();
     });
     app.get("/food", function (req, res) {
         //searching in the database
@@ -61,6 +65,8 @@ module.exports = function (app) {
                 res.render('food.ejs', { food: result, search:'' });
             }
         });
+        // end the connection
+        db.end();
     });
     app.get("/nutrient", function (req, res) {
         //searching in the database
@@ -79,6 +85,8 @@ module.exports = function (app) {
                 res.render('nutrient.ejs', { nutrient: result, search: '' });
             }
         });
+        // end the connection
+        db.end();
     });
     app.get("/purchases", function (req, res) {
         //searching in the database
@@ -109,6 +117,8 @@ module.exports = function (app) {
                 res.render('purchases.ejs', { purchases: result, search: '' });
             }
         });
+        // end the connection
+        db.end();
     });
     app.get("/expenditures", function (req, res) {
         //searching in the database
@@ -139,6 +149,8 @@ module.exports = function (app) {
                 res.render('expenditures.ejs', { expenditures: result, search: '' });
             }
         });
+        // end the connection
+        db.end();
     });
     app.get("/intakes", function (req, res) {
         //searching in the database
@@ -164,6 +176,8 @@ module.exports = function (app) {
                 res.render('intakes.ejs', { intakes: result, search: '' });
             }
         });
+        // end the connection
+        db.end();
     });
     app.post("/food", function (req, res) {
         //searching in the database
@@ -184,6 +198,8 @@ module.exports = function (app) {
                 res.render('food.ejs', { food: result, search: word });
             }
         });
+        // end the connection
+        db.end();
     });
     app.post("/nutrient", function (req, res) {
         //searching in the database
@@ -203,6 +219,8 @@ module.exports = function (app) {
                 res.render('nutrient.ejs', { nutrient: result, search: word });
             }
         });
+        // end the connection
+        db.end();
     });
     app.post("/intakes", function (req, res) {
         //searching in the database
@@ -230,6 +248,8 @@ module.exports = function (app) {
                 res.render('intakes.ejs', { intakes: result, search: word });
             }
         });
+        // end the connection
+        db.end();
     });
     app.post("/purchases", function (req, res) {
         //searching in the database
@@ -262,6 +282,8 @@ module.exports = function (app) {
                 res.render('purchases.ejs', { purchases: result, search: word });
             }
         });
+        // end the connection
+        db.end();
     });
     app.post("/expenditures", function (req, res) {
         //searching in the database
@@ -294,5 +316,7 @@ module.exports = function (app) {
                 res.render('expenditures.ejs', { expenditures: result, search: word });
             }
         });
+        // end the connection
+        db.end();
     });
 }
