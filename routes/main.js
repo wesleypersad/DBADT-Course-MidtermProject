@@ -25,7 +25,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.get("/ethnicity", function (req, res) {
         //searching in the database
@@ -45,7 +45,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.get("/food", function (req, res) {
         //searching in the database
@@ -66,7 +66,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.get("/nutrient", function (req, res) {
         //searching in the database
@@ -86,7 +86,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.get("/purchases", function (req, res) {
         //searching in the database
@@ -118,7 +118,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.get("/expenditures", function (req, res) {
         //searching in the database
@@ -150,7 +150,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.get("/intakes", function (req, res) {
         //searching in the database
@@ -199,7 +199,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.post("/nutrient", function (req, res) {
         //searching in the database
@@ -220,7 +220,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.post("/intakes", function (req, res) {
         //searching in the database
@@ -249,7 +249,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.post("/purchases", function (req, res) {
         //searching in the database
@@ -283,7 +283,7 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
     app.post("/expenditures", function (req, res) {
         //searching in the database
@@ -317,6 +317,6 @@ module.exports = function (app) {
             }
         });
         // end the connection
-        db.end();
+        //db.end();
     });
 }
