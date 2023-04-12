@@ -23,8 +23,6 @@ module.exports = function (app) {
                 + req.query.keyword + "error: " + err.message);
             res.redirect("/");
         }
-        // end the connection
-        //db.end();
     });
     app.get("/ethnicity", async function (req, res) {
         try {
@@ -42,8 +40,6 @@ module.exports = function (app) {
                 + req.query.keyword + "error: " + err.message);
             res.redirect("/");
         }
-        // end the connection
-        //db.end();
     });
     app.get("/food", async function (req, res) {
         try {
@@ -161,8 +157,6 @@ module.exports = function (app) {
                 + req.query.keyword + "error: " + err.message);
             res.redirect("/");
         }
-        // end the connection
-        db.end();
     });
     app.post("/food", async function (req, res) {
         //searching in the database
@@ -182,8 +176,6 @@ module.exports = function (app) {
                 + req.query.keyword + "error: " + err.message);
             res.redirect("/");
         }
-        // end the connection
-        //db.end();
     });
     app.post("/nutrient", async function (req, res) {
         //searching in the database
@@ -202,8 +194,6 @@ module.exports = function (app) {
                 + req.query.keyword + "error: " + err.message);
             res.redirect("/");
         }
-        // end the connection
-        //db.end();
     });
     app.post("/intakes", async function (req, res) {
         try {
@@ -230,8 +220,6 @@ module.exports = function (app) {
                 + req.query.keyword + "error: " + err.message);
             res.redirect("/");
         }
-        // end the connection
-        //db.end();
     });
     app.post("/purchases", async function (req, res) {
         //searching in the database
@@ -263,8 +251,6 @@ module.exports = function (app) {
                 + req.query.keyword + "error: " + err.message);
             res.redirect("/");
         }
-        // end the connection
-        //db.end();
     });
     app.post("/expenditures", async function (req, res) {
         //searching in the database
