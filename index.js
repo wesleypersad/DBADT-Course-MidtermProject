@@ -2,6 +2,7 @@
 require('dotenv').config();
 
 const express = require("express");
+const cors = require("cors");
 const bodyParser = require("body-parser");
 const app = express();
 const mysql = require("mysql2");
@@ -16,6 +17,7 @@ const database = process.env.DB_NAME;
 
 const path = require("path");
 
+app.use(cors());
 app.use(express.static(path.join(__dirname, '/public')));
 
 app.use(bodyParser.urlencoded({
