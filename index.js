@@ -29,7 +29,8 @@ const db = mysql.createConnection({
     user: user,
     port: portdb,
     password: password,
-    database: database
+    database: database,
+    autoReconnect: true
 });
 
 // connect to database
